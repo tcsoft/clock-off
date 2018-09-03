@@ -21,6 +21,9 @@
 ##                                                                         ##
 #############################################################################
 ##                                                                         ##
+##  Version 0.2 03-Sep-18 + Added recognition for Saturday wake up time    ##
+##                        + Line 69 & 70 (ELIF statement)                  ##
+##                        + Change timeEnd to new bedtime                  ##
 ##  Version 0.1 07-Apr-17                                                  ##
 ##                                                                         ##
 #############################################################################
@@ -63,12 +66,14 @@ while True:
     daynum = date.today().weekday()
     if daynum < 5:
         timeStart = '06:30'
+    elif daynum ==5:
+    	timeStart = '07:30'
     else:
-        timeStart = '07:30'
+        timeStart = '08:00'
 #############################################################################
 ##  Here is where the end time (bedtime) is set (timeEnd)                  ##
 #############################################################################
-    timeEnd = '19:50'
+    timeEnd = '20:15'
 #############################################################################
 ##  timeNow is the 24hr clock from the current system time                 ##
 #############################################################################
